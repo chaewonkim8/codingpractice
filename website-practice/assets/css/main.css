@@ -99,12 +99,20 @@ input, select, textarea {
 	}
 
 	body {
-		background-color: #935d8c;
+		body {
+			background-color: #DBE4C6;
+			background-image: linear-gradient(to bottom right, #C7D6B9 0%, #DBE4C6 100%);
+		  }
+
+/*		background: rgb(209,229,195);
+		background: linear-gradient(45deg, rgba(209,229,195,1) 60%, rgba(213,185,214,1) 98%);
+		background-color: #DBE4C6;
 		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
 		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
 		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
 		background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-	}
+*/
+		}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
@@ -120,8 +128,8 @@ input, select, textarea {
 /* Type */
 
 	body {
-		background-color: #935d8c;
-		color: rgba(255, 255, 255, 0.65);
+		background-color: #DBE4C6 !important;
+		color: #1B3252;
 	}
 
 	body, input, select, textarea {
@@ -315,7 +323,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ffffff;
+		color: #1B3252;
 	}
 
 	blockquote {
@@ -1924,8 +1932,8 @@ input, select, textarea {
 	button,
 	.button {
 		background-color: transparent;
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
-		color: #ffffff !important;
+		box-shadow: inset 0 0 0 1px #1B3252;
+		color: #1B3252;
 	}
 
 		input[type="submit"]:hover,
@@ -2140,7 +2148,7 @@ input, select, textarea {
 	}
 
 	label {
-		color: #ffffff;
+		color: #1B3252;
 	}
 
 	input[type="text"],
@@ -2340,16 +2348,16 @@ input, select, textarea {
 		}
 
 	.icon.major {
-		border-color: rgba(255, 255, 255, 0.35);
+		border-color: #1B3252;
 	}
 
 		.icon.major:before {
-			border-color: rgba(255, 255, 255, 0.35);
+			border-color: #1B3252;
 		}
 
 	.icon.alt {
-		border-color: rgba(255, 255, 255, 0.35);
-		color: #ffffff;
+		border-color: #1B3252;
+		color: #1B3252;
 	}
 
 		.icon.alt:hover {
@@ -2488,7 +2496,7 @@ input, select, textarea {
 	}
 
 	dl dt {
-		color: #ffffff;
+		color: #1B3252;
 	}
 
 /* Actions */
@@ -3378,7 +3386,7 @@ input, select, textarea {
 		#main button,
 		#main .button {
 			background-color: transparent;
-			box-shadow: inset 0 0 0 1px #dddddd;
+			box-shadow: inset 0 0 0 1px #1B3252;
 			color: #636363 !important;
 		}
 
