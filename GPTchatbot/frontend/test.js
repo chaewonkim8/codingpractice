@@ -37,7 +37,9 @@ window.onload = async function() {
     sendBtn.addEventListener('click', async () => {
       const userMessage = message.value.trim();
       if (userMessage === '') return;
-  
+      
+      inputMessages.push(userMessage);
+
       const counselor = await sendCounselorRequest();
       const botMessage = counselor.assistant;
   
@@ -45,7 +47,7 @@ window.onload = async function() {
         <div class="message user-message">${userMessage}</div>
         <div class="message bot-message">${botMessage}</div>
       `;
-      inputMessages.push(userMessage);
+      
       outputMessages.push(botMessage);
       //console.log(inputMessages);
       //console.log(outputMessages);
