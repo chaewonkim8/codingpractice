@@ -1,0 +1,6 @@
+hackathon/
+node_modules/
+GPTchatbot/backend/node_modules
+chatdoge/backend/node_modules
+.env
+GPTchatbot/backend/.env
