@@ -1,10 +1,12 @@
-const apiKey = "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"
+require('dotenv').config()
+const apiKey = process.env.OPENAI_API_KEY;
+console.log(apiKey);
 const { Configuration, OpenAIApi } = require("openai");
 const express = require('express')
 var cors = require('cors')
 const app = express()
 const configuration = new Configuration({
-    apiKey: apiKey,
+    apiKey: apiKey
 });
 const openai = new OpenAIApi(configuration);
 
@@ -31,18 +33,18 @@ app.post('/counselor', async function (req, res) {
     //    { role: "assistant", content: "I understand how challenging it can be to work in a foreign country. As a therapist, I'm here to help you manage your emotions and cope with stress. Let's work together to improve your mental health and well-being. What are some of the things that have been causing you stress lately?" }
     ]
 
-    while (inputMessages.length != 0 || outputMessages.length != 0) {
-        if (inputMessages.length != 0) {
+    while ((inputMessages && inputMessages.length != 0) || (outputMessages && outputMessages.length != 0)) {
+        if (inputMessages && inputMessages.length != 0) {
             messages.push(
                 JSON.parse('{"role": "user", "content": "'+String(inputMessages.shift())+'"}')
             )
         }
-        if (outputMessages.length != 0) {
+        if (outputMessages && outputMessages.length != 0) {
             messages.push(
                 JSON.parse('{"role": "assistant", "content": "'+String(outputMessages.shift())+'"}')
-            )    
-        } 
-    }
+            )
+        }
+    }    
 
     //console.log(messages);
 
