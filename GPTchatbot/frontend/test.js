@@ -7,7 +7,8 @@ window.onload = async function() {
   
     async function sendCounselorRequest() {
       try {
-        const response = await fetch('http://localhost:3000/counselor', {
+        //const response = await fetch('http://localhost:3000/counselor', {
+        const response = await fetch('http://16thtryworkersassistant-env.eba-7idwpbmf.us-east-2.elasticbeanstalk.com/counselor', {  
           method: 'POST',
           body: JSON.stringify({
             inputMessages: inputMessages,
