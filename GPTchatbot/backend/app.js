@@ -18,7 +18,7 @@ const openai = new OpenAIApi(configuration);
 
 //CORS 문제해결
 app.use(function(req, res, next) {
-    const allowedOrigins = ['172.30.1.37', '172.30.1.18', '172.20.10.7', 'http://127.0.0.1:5500', 'http://localhost:5500', 'http://11thtryworkersassistant-env.eba-igtwbpi3.us-east-2.elasticbeanstalk.com', 'http://16thtryworkersassistant-env.eba-7idwpbmf.us-east-2.elasticbeanstalk.com'];
+    const allowedOrigins = ['https://worker-chatbot.netlify.app/', '172.30.1.37', '172.30.1.18', '172.20.10.7', 'http://127.0.0.1:5500', 'http://localhost:5500', 'http://11thtryworkersassistant-env.eba-igtwbpi3.us-east-2.elasticbeanstalk.com', 'http://16thtryworkersassistant-env.eba-7idwpbmf.us-east-2.elasticbeanstalk.com'];
     const origin = req.headers.origin;
     if (allowedOrigins.includes(origin)) {
       res.setHeader('Access-Control-Allow-Origin', origin);
