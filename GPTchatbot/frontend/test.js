@@ -7,8 +7,14 @@ window.onload = async function() {
   
     async function sendCounselorRequest() {
       try {
+        //로컬에서 서버 node app.js 커맨드로 띄웠을때 테스트하는 코드
         //const response = await fetch('http://localhost:3000/counselor', {
-        const response = await fetch('http://16thtryworkersassistant-env.eba-7idwpbmf.us-east-2.elasticbeanstalk.com/counselor', {  
+        
+        //http 요청으로 서버와 통신할때 사용하는 코드
+        //const response = await fetch('http://16thtryworkersassistant-env.eba-7idwpbmf.us-east-2.elasticbeanstalk.com/counselor', { 
+
+        //https 요청으로 서버와 통신할때 쓰는 코드
+        const response = await fetch('https://www.deployapp.click/counselor', {
           method: 'POST',
           body: JSON.stringify({
             inputMessages: inputMessages,
