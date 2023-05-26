@@ -41,12 +41,12 @@ window.onload = async function() {
     outputMessages.push(botMessage);
     chatlog.insertAdjacentHTML('beforeend', chatEntry);
   
-    const handleUserMessage = async () => {
+    sendBtn.addEventListener('click', async () => {
       const userMessage = message.value.trim();
       if (userMessage === '') return;
-  
+      
       inputMessages.push(userMessage);
-  
+
       const counselor = await sendCounselorRequest();
       const botMessage = counselor.assistant;
   
@@ -54,22 +54,12 @@ window.onload = async function() {
         <div class="message user-message">${userMessage}</div>
         <div class="message bot-message">${botMessage}</div>
       `;
-  
+      
       outputMessages.push(botMessage);
+      //console.log(inputMessages);
+      //console.log(outputMessages);
       chatlog.insertAdjacentHTML('beforeend', chatEntry);
       message.value = '';
-    };
-
-    sendBtn.addEventListener('click', handleUserMessage);
-
-    message.addEventListener('keydown', async (event) => {
-      if (event.key === 'Enter') {
-        event.preventDefault(); // Prevent the default behavior of the Enter key
-  
-        if (!event.shiftKey) {
-          handleUserMessage();
-        }
-      }
     });
   }
   
