@@ -1,9 +1,10 @@
 import React from "react";
-import { useState } from "react";
+import TextField from '@mui/material/TextField';
 
 function Textarea({ value, onChange, onKeyDown }) {
     return (
-      <textarea
+      <TextField
+        fullWidth
         id="message"
         placeholder="Type your message here..."
         value={value}

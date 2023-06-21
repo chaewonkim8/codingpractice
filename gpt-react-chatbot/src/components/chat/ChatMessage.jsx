@@ -1,13 +1,13 @@
 import React from 'react';
-import { useState } from 'react';
+import ListItem from '@mui/material/ListItem';
 
 function ChatMessage({ message }) {
     const messageClass = message.class;
   
     return (
-      <div className={`message ${messageClass}`}>
+      <ListItem className={`message ${messageClass}`}>
         {message.content}
-      </div>
+      </ListItem>
     );
   }
   

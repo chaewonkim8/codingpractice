@@ -1,10 +1,12 @@
 import React from "react";
+import Container from '@mui/material/Container';
 
 function Header() {
     return (
-      <header>
-        <h1>Support and Care for MDW</h1>
-      </header>
+      <Container>
+        <h1>Counselor Chatbot</h1>
+        <h3>support and care for workers in Hong Kong</h3>
+      </Container>
     );
   }
 

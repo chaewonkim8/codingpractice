@@ -5,7 +5,7 @@ import Chatlog from './chat/Chatlog.jsx'
 
 function Mainbox({ chatHistory, onSend }) {
     return (
-      <div id="chatbox">
+      <div id="mainbox">
         <Chatlog chatHistory={chatHistory} />
         <Input onSend={onSend} />
         {/* {console.log(chatHistory)} */}

@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import Textarea from './Textarea.jsx'
-import Button from './Button.jsx'
+import SendButton from './SendButton.jsx'
+import Grid from '@mui/material/Grid';
 
 function Input({ onSend }) {
     const [message, setMessage] = useState('');
@@ -19,10 +20,10 @@ function Input({ onSend }) {
     }
   
     return (
-      <div className="input">
-        <Textarea value={message} onChange={handleInputChange} onKeyDown={handleKeyDown} />
-        <Button onSend={() => { onSend(message); setMessage(''); }} />
-      </div>
+      <Grid className="input">
+        <Textarea xs={10} value={message} onChange={handleInputChange} onKeyDown={handleKeyDown} />
+        <SendButton xs={4} onSend={() => { onSend(message); setMessage(''); }} />
+      </Grid>
     );
   }
 
