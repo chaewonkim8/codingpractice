@@ -6,7 +6,7 @@ function ChatMessage({ message }) {
   
     return (
       <ListItem className={`message ${messageClass}`}>
-        {message.content}
+        {message.message}
       </ListItem>
     );
   }

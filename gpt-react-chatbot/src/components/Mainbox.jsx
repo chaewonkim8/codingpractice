@@ -2,14 +2,14 @@ import React from 'react';
 import { useState } from 'react';
 import Input from './input/Input.jsx';
 import Chatlog from './chat/Chatlog.jsx'
+import Box from '@mui/material/Box';
 
 function Mainbox({ chatHistory, onSend }) {
     return (
-      <div id="mainbox">
+      <Box id="mainbox">
         <Chatlog chatHistory={chatHistory} />
         <Input onSend={onSend} />
-        {/* {console.log(chatHistory)} */}
-      </div>
+      </Box>
     );
   }
 export default Mainbox;
