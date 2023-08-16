@@ -10,16 +10,14 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-// let corsOptions = {
-//     origin: 'http://127.0.0.1:5500',
-//     credentials: true
-// }
-// app.use(cors(corsOptions));
+//CORS middleware (placed before defining routes)
+app.use(cors());
 
 //CORS 문제해결
 app.use(function(req, res, next) {
-    const allowedOrigins = ['https://worker-chatbot.netlify.app/', '192.168.0.2', '172.30.1.37', '172.30.1.18', '172.20.10.7', 'http://127.0.0.1:5500', 'http://localhost:5500', 'http://11thtryworkersassistant-env.eba-igtwbpi3.us-east-2.elasticbeanstalk.com', 'http://16thtryworkersassistant-env.eba-7idwpbmf.us-east-2.elasticbeanstalk.com'];
+    const allowedOrigins = ['https://www.deployapp.click/', 'https://worker-chatbot.netlify.app/', 'https://www.deployapp.click/counselor', 'https://worker-chatbot.netlify.app/counselor', '192.168.0.2', '172.30.1.37', '172.30.1.18', '172.20.10.7', '10.10.139.98', 'http://127.0.0.1:5500', 'http://localhost:5500', 'http://11thtryworkersassistant-env.eba-igtwbpi3.us-east-2.elasticbeanstalk.com', 'http://16thtryworkersassistant-env.eba-7idwpbmf.us-east-2.elasticbeanstalk.com'];
     const origin = req.headers.origin;
+    console.log(origin)
     if (allowedOrigins.includes(origin)) {
       res.setHeader('Access-Control-Allow-Origin', origin);
     }

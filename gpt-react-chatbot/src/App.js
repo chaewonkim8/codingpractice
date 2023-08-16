@@ -1,7 +1,7 @@
 //using Chatscope UI Kit
 
 import React, { useState, useEffect } from 'react';
-import './App.css';
+import './App.module.css';
 import ChatContainerEdited from './components/uikit-edited/ChatContainerEdited.jsx'
 import styles from "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import { MainContainer} from "@chatscope/chat-ui-kit-react";
@@ -83,7 +83,7 @@ function App() {
   }
 
   return (
-    <div style={{ position: "relative", height: "500px" }}>
+    <div classname={styles.myGlobalClass} style={{ position: "relative", height: "500px" }}>
       <MainContainer>
         <ChatContainerEdited onSend = {handleUserMessage} chatHistory={chatHistory}/>
       </MainContainer>
